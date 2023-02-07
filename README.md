@@ -170,6 +170,8 @@ The script does the following:
 Instance State: Running
 Status Checks: 2/2 checks passed
 
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(41).png)
+
 ## Task 2: Monitoring your instance
 
 ### Monitoring 
@@ -203,6 +205,8 @@ Scroll through the output, and note that the HTTP package was installed from the
 
 ### Return to EC2 dashboard
 
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(42).png)
+
 ## Task 3: Updating your security group and accessing the web server
 ### When you launched the EC2 instance, you provided a script that installed a web server and created a simple web page. In this task, you access content from the web server.
 
@@ -227,6 +231,8 @@ Keep the browser tab open, but return to the EC2 Management Console tab.
 6. Choose Save rules
 7. Return to the web server browser tab with the public IPv4 address that you previously opened, and choose to refresh the page.
 8. You should see the message Hello From Your Web Server!
+
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(43).png)
 
 ## Task 4: Resizing your instance - instance type and EBS volume
 As your needs change, you might find that your instance is over utilized (too small) or under utilized (too large). If so, you can change the instance type. For example, if a t2.micro instance is too small for its workload, you can change it to an m5.medium instance. Similarly, you can change the size of a disk.
@@ -268,6 +274,8 @@ You now start the instance again, which now has less memory but more disk space.
 2. Next to your Web-Server, select the  check box.
 3. From the Instance state  dropdown menu, choose Start instance.
 
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(44).png)
+
 ## Task 5: Exploring EC2 Limits
 
 Amazon EC2 provides different resources, including:
@@ -283,16 +291,22 @@ Each AWS account has default limits on these resources on a per-Region basis. To
 
 You can request an increase for many of these limits.
 
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(45).png)
+
 ## Task 6: Testing termination protection
 
 You can delete your instance when you no longer need it. This is referred to as terminating your instance. You cannot connect to or restart an instance after it has been terminated.
 
 In this task, you learn how to use termination protection.
 
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(46).png)
+
 1. In the left navigation pane, choose `Instances`. 
 2. Select the check box for your Web-Server.
 3. At the top of the page, in the `Instance state` dropdown menu, choose `Terminate instance`. 
 4. From the `Terminate instance?` pop-up window, choose `Terminate`.
+
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/main/Screenshot%20(47).png)
 
 **Note**: 
 At the top of the page, you may see a message saying `Failed to terminate an instance: The instance 'i-xxxxxxxxxxxx' may not be terminated. Modify its 'disableApiTermination' instance attribute and try again`. This message is a safeguard to prevent accidental termination of an instance. If you really want to terminate the instance, you need to turn off the termination protection.
