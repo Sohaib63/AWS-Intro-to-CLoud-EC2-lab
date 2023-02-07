@@ -52,7 +52,7 @@ Arrange the AWS Management Console tab so that it displays along side these inst
 
 Tip: If you would like the lab instructions to display across the entire browser window, you can hide the terminal in the browser panel by unchecking the Terminal checkbox in the top right.
 
-![AWS](Screenshot (40).png)
+![AWS](https://github.com/Sohaib63/AWS-Intro-to-CLoud-EC2-lab/blob/5d33805aac792ed3a3f436c60fb357bb1c91a7e5/Screenshot%20(40).png)
 
 ## Task 1: Launching your EC2 instance
 In this task, you launch an EC2 instance with termination protection. Termination protection prevents you from accidentally terminating an EC2 instance. You also deploy your instance with a user data script in order to deploy a simple web server.
