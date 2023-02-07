@@ -279,3 +279,24 @@ Each AWS account has default limits on these resources on a per-Region basis. To
 **Note**: There is a limit on the number of instances that can be launched in each Region. Make sure your instance launch request does not exceed the current limit for that Region.
 
 You can request an increase for many of these limits.
+
+## Task 6: Testing termination protection
+
+You can delete your instance when you no longer need it. This is referred to as terminating your instance. You cannot connect to or restart an instance after it has been terminated.
+
+In this task, you learn how to use termination protection.
+
+1. In the left navigation pane, choose `Instances`. 
+2. Select the check box for your Web-Server.
+3. At the top of the page, in the `Instance state` dropdown menu, choose `Terminate instance`. 
+4. From the `Terminate instance?` pop-up window, choose `Terminate`.
+
+**Note**: 
+At the top of the page, you may see a message saying `Failed to terminate an instance: The instance 'i-xxxxxxxxxxxx' may not be terminated. Modify its 'disableApiTermination' instance attribute and try again`. This message is a safeguard to prevent accidental termination of an instance. If you really want to terminate the instance, you need to turn off the termination protection.
+
+### Submitting your work:
+1. At the top of these instructions, choose `Submit` to record your progress. 
+2. When prompted, choose `Yes`.
+
+**Tip**: 
+If you previously hid the terminal in the browser panel, select the `Terminal` check box in the upper right to expose the panel again. This option ensures that the lab instructions remain visible after you choose Submit.
