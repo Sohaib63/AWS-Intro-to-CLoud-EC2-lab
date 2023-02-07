@@ -142,7 +142,7 @@ The script does the following:
 - Activate the Web server
 - Create a simple web page
 
-###Step 8: Launch an EC2 instance
+### Step 8: Launch an EC2 instance
 
 ## Now that you have configured your EC2 instance settings, it is time to launch your instance.
 
