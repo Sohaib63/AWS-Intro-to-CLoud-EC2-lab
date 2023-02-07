@@ -1,4 +1,3 @@
-# AWS-Intro-to-CLoud-EC2-lab
 # Lab 2: Introduction to Amazon EC2
 
 ## Lab overview and objectives
@@ -86,3 +85,30 @@ Amazon EC2 provides a wide selection of instance types that are optimized to fit
 In this step, you choose a **t2.micro** instance. This instance type has 1 virtual CPU and 1 GiB of memory.
 Keep the default instance type, **t2.micro**.
 
+### Step 4: Configure a key pair
+
+Amazon EC2 uses public key cryptography to encrypt and decrypt login information. To log in to your instance, you must create a key pair, specify the name of the key pair when you launch the instance, and provide the private key when you connect to the instance.
+
+In this lab, you do not log in to your instance, so you do not require a key pair.
+
+In the Key pair (login) section, from the Key pair name - required dropdown list, choose `Proceed without a key pair`.
+
+### Step 5: Configure the network settings
+
+You use this pane to configure networking settings.
+
+The virtual private cloud (VPC) indicates which VPC you want to launch the instance into. You can have multiple VPCs, including different ones for development, testing, and production.
+
+In the Network settings section, choose `Edit`.
+
+From the VPC - required dropdown list, choose `Lab VPC`.
+
+The Lab VPC was created using an AWS CloudFormation template during the setup process of your lab. This VPC includes two public subnets in two different Availability Zones.
+
+In the Network settings section, for Security group name - required, enter `Web Server security group`
+
+A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.
+
+In this lab, you do not log in to your instance using SSH. Removing SSH access improves the security of the instance.
+
+To delete the existing SSH rule, next to Security group rule 1, choose `Remove`.
