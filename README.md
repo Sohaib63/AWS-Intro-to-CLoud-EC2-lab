@@ -51,6 +51,9 @@ Tip: If a new browser tab doesn't open, a banner or icon is usually at the top o
 Arrange the AWS Management Console tab so that it displays along side these instructions. Ideally, you will be able to see both browser tabs at the same time so that you can follow the lab steps more easily.
 
 Tip: If you would like the lab instructions to display across the entire browser window, you can hide the terminal in the browser panel by unchecking the Terminal checkbox in the top right.
+
+![AWS]('Screenshot (40).png')
+
 ## Task 1: Launching your EC2 instance
 In this task, you launch an EC2 instance with termination protection. Termination protection prevents you from accidentally terminating an EC2 instance. You also deploy your instance with a user data script in order to deploy a simple web server.
 
