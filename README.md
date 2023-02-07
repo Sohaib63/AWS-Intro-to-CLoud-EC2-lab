@@ -112,3 +112,32 @@ A security group acts as a virtual firewall that controls the traffic for one or
 In this lab, you do not log in to your instance using SSH. Removing SSH access improves the security of the instance.
 
 To delete the existing SSH rule, next to Security group rule 1, choose `Remove`.
+
+### Step 6: Add storage
+Amazon EC2 stores data on a network-attached virtual disk called Amazon Elastic Block Store (Amazon EBS).
+
+You launch the EC2 instance using a default 8 GiB disk volume. This is your root volume (also known as a boot volume).
+
+In the Configure storage pane, keep the default storage configuration.
+
+### Step 7: Configure advanced details
+Expand the Advanced details pane.
+
+When you no longer require an EC2 instance, you can terminate it, which means that the instance stops, and Amazon EC2 releases the instance's resources. You cannot restart a terminated instance. If you want to prevent your users from accidentally terminating the instance, you can enable termination protection for the instance, which prevents users from terminating instances.
+
+From the Termination protection dropdown list, choose  Enable.
+
+When you launch an instance in Amazon EC2, you have the option of passing user data to the instance. These commands can be used to perform common automated configuration tasks and even run scripts after the instance starts. 
+
+#!/bin/bash
+yum -y install httpd
+systemctl enable httpd
+systemctl start httpd
+echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+
+The script does the following:
+
+- Install an Apache web server (httpd)
+- Configure the web server to automatically start on boot
+- Activate the Web server
+- Create a simple web page
