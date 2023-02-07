@@ -199,3 +199,28 @@ Scroll through the output, and note that the HTTP package was installed from the
 
 
 ### Return to EC2 dashboard
+
+# Task 3: Updating your security group and accessing the web server
+## When you launched the EC2 instance, you provided a script that installed a web server and created a simple web page. In this task, you access content from the web server.
+
+1. Select the check box next to the Amazon EC2 Web-Server that you created, and then choose the Details tab.
+2. Copy the Public IPv4 address of your instance to your clipboard.
+3. In your web browser, open a new tab, paste the IP address that you just copied, and then press Enter.
+
+#### Question: Are you able to access your web server? Why not?
+You are not currently able to access your web server because the security group is not permitting inbound traffic on port 80, which is used for HTTP web requests. This is a demonstration of how to use a security group as a firewall to restrict the network traffic that is allowed in and out of an instance.
+
+To correct this issue, you now update the security group to permit web traffic on port 80.
+
+Keep the browser tab open, but return to the EC2 Management Console tab.
+1. In the left navigation pane, choose Security Groups.
+2. Next to Web Server security group, select the check box.
+3. Choose the Inbound rules tab.
+4. The security group currently has no rules.
+5. Choose Edit inbound rules, and then choose Add rule and configure the following options:
+   * Type: Choose HTTP.
+   * Source: Choose Anywhere-IPv4.
+   * Note: Notice the "Rules with source of 0.0.0.0/0 allow all IP addresses to access your instance. We recommend setting security group rules to allow access from known IP addresses only." While this is true and common best practice, this lab allows access from any IP address (Anywhere) to simplify both the security group configuration and testing of the website running on your EC2 instance.
+6. Choose Save rules
+7. Return to the web server browser tab with the public IPv4 address that you previously opened, and choose to refresh the page.
+8. You should see the message Hello From Your Web Server!
