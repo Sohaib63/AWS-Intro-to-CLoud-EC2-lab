@@ -200,8 +200,8 @@ Scroll through the output, and note that the HTTP package was installed from the
 
 ### Return to EC2 dashboard
 
-# Task 3: Updating your security group and accessing the web server
-## When you launched the EC2 instance, you provided a script that installed a web server and created a simple web page. In this task, you access content from the web server.
+## Task 3: Updating your security group and accessing the web server
+### When you launched the EC2 instance, you provided a script that installed a web server and created a simple web page. In this task, you access content from the web server.
 
 1. Select the check box next to the Amazon EC2 Web-Server that you created, and then choose the Details tab.
 2. Copy the Public IPv4 address of your instance to your clipboard.
