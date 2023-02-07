@@ -224,3 +224,44 @@ Keep the browser tab open, but return to the EC2 Management Console tab.
 6. Choose Save rules
 7. Return to the web server browser tab with the public IPv4 address that you previously opened, and choose to refresh the page.
 8. You should see the message Hello From Your Web Server!
+
+## Task 4: Resizing your instance - instance type and EBS volume
+As your needs change, you might find that your instance is over utilized (too small) or under utilized (too large). If so, you can change the instance type. For example, if a t2.micro instance is too small for its workload, you can change it to an m5.medium instance. Similarly, you can change the size of a disk.
+
+### Stop your instance
+Before you can resize an instance, you must stop it.
+
+When you stop an instance, it is shut down. There is no charge for a stopped EC2 instance, but the storage charge for attached EBS volumes remains.
+
+1. On the EC2 Management Console, in the left navigation pane, choose Instances.
+2. The  check box next to Web Server should already be selected.
+3. At the top of the page, select the Instance state  dropdown menu, and choose Stop instance.
+4. In the Stop instance? pop-up window, choose Stop.
+5. Your instance performs a normal shutdown and then stops running.
+6. Wait for the Instance state to display Stopped.
+
+### Change the instance type
+1. Select the check box next to your Web-Server.
+2. From the Actions  dropdown menu, select Instance settings  Change instance type, and then configure the following option:
+   - Instance type: Select t2.nano.
+3. Choose Apply.
+4. When the instance is started again, it is a t2.nano instance.
+
+_Note: You are restricted from using other instance types in this lab._
+
+### Resize the EBS volume
+1. In the left navigation menu, choose Volumes.
+2. Select the check box for the one volume that is listed, which is attached to your Web-Server instance.
+3. In the Actions  dropdown menu, select Modify Volume.
+4. The disk volume currently has a size of 8 GiB. You now increase the size of this disk.
+5. Change the Size (GiB) to 10
+6. Choose Modify.
+7. To confirm and increase the size of the volume, in the Modify pop-up window, choose Modify.
+
+### Start the resized instance
+You now start the instance again, which now has less memory but more disk space.
+
+1. In left navigation pane, choose Instances.
+2. Next to your Web-Server, select the  check box.
+3. From the Instance state  dropdown menu, choose Start instance.
+
