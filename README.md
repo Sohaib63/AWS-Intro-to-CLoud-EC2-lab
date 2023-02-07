@@ -166,3 +166,36 @@ The script does the following:
 
 Instance State: Running
 Status Checks: 2/2 checks passed
+
+## Task 2: Monitoring your instance
+
+### Monitoring 
+Monitoring is an important part of maintaining the reliability, availability, and performance of your EC2 instances and your AWS solutions.
+
+### Status checks tab
+Choose the Status checks tab. With instance status monitoring, you can quickly determine whether Amazon EC2 has detected any problems that might prevent your instances from running applications. Amazon EC2 performs automated checks on every running EC2 instance to identify hardware and software issues. Notice that both the System reachability and Instance reachability checks have passed.
+
+### Monitoring tab
+Choose the Monitoring tab. This tab displays Amazon CloudWatch metrics for your instance. Currently, there are not many metrics to display because the instance was recently launched. You can choose a graph to see an expanded view. Amazon EC2 sends metrics to Amazon CloudWatch for your EC2 instances. Basic (5 minute) monitoring is enabled by default. You can enable detailed (1 minute) monitoring.
+
+### System log
+At the top of the page, choose the Actions dropdown menu. Select Monitor and troubleshoot Get system log. The system log displays the console output of the instance, which is a valuable tool for diagnosing problems. It is especially useful for troubleshooting kernel problems and service configuration issues that could cause an instance to terminate or become unreachable before its SSH daemon can be started. If you do not see a system log, wait a few minutes and then try again.
+
+### Console output
+Scroll through the output, and note that the HTTP package was installed from the user data that you added when you created the instance. The entries in the system log should be similar to the following example:
+
+[ 26.760639] cloud-init[3280]: Installed:
+[ 26.770051] cloud-init[3280]: httpd.x86_64 0:2.4.52-1.amzn2
+[ 26.777748] cloud-init[3280]: Dependency Installed:
+[ 26.781750] cloud-init[3280]: apr.x86_64 0:1.7.0-9.amzn2
+[ 26.793739] cloud-init[3280]: apr-util.x86_64 0:1.6.1-5.amzn2.0.2
+[ 26.796595] cloud-init[3280]: apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2
+[ 26.805964] cloud-init[3280]: generic-logos-httpd.noarch 0:18.0.0-4.amzn2
+[ 26.817765] cloud-init[3280]: httpd-filesystem.noarch 0:2.4.52-1.amzn2
+[ 26.829760] cloud-init[3280]: httpd-tools.x86_64 0:2.4.52-1.amzn2
+[ 26.833753] cloud-init[3280]: mailcap.noarch 0:2.1.41-2.amzn2
+[ 26.845761] cloud-init[3280]: mod_http2.x86_64 0:1.15.19-1.amzn2.0.1
+[ 26.849762] cloud-init[3280]: Complete!
+
+
+### Return to EC2 dashboard
