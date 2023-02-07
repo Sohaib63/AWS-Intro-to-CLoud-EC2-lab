@@ -1,56 +1,54 @@
 # AWS-Intro-to-CLoud-EC2-lab
-# Introduction to Amazon EC2
+# Lab 2: Introduction to Amazon EC2
 
-In this tutorial, we will be covering the second lab of the "Introduction to Cloud 101" course on AWS Educate, which is the "Introduction to Amazon EC2". The Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides scalable computing capacity in the cloud. This tutorial will guide you through the steps to launch an EC2 instance, connect to it, and perform basic tasks on it.
+## Lab overview and objectives
 
-## Step 1: Log in to the AWS Console
+This lab provides you with a basic overview of launching, resizing, managing, and monitoring an Amazon Elastic Compute Cloud (Amazon EC2) instance.
 
-To access the EC2 service, you need to log in to the AWS Console. If you don't have an AWS account, you can create one by visiting the AWS website. 
+Amazon EC2 is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing simple and intuitive to use.
 
-![Login to AWS Console](images/login.png)
+With the web service interface of Amazon EC2, you can obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources. You can run application servers, blogs, batch processing, and more on the Amazon computing environment. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes so that you can quickly scale capacity both up and down as your computing requirements change.
 
-## Step 2: Launching an EC2 Instance
+Amazon EC2 changes the economics of computing so that you pay for only the capacity that you actually use. Amazon EC2 provides developers the tools to build failure-resilient applications and isolate themselves from common failure scenarios.
 
-Once you are logged in, navigate to the EC2 dashboard and click on the "Launch Instance" button. In the next screen, select the Amazon Linux 2 AMI. For the instance type, select "t2.micro".
+## Objectives
 
-![Launch EC2 Instance](images/launch_instance.png)
+After completing this lab, you will know how to:
 
-## Step 3: Configure the Instance
+1. Launch a web server with termination protection enabled
+2. Monitor Your EC2 instance
+3. Modify the security group that your web server is using to allow HTTP access
+4. Resize your EC2 instance to scale
+5. Explore Amazon EC2 limits
+6. Test termination protection
+7. Terminate your EC2 instance
 
-In the next step, you need to configure the instance. For the purpose of this tutorial, you can use the default settings. However, if you need to, you can configure the instance to your specifications.
+## Duration
 
-![Configure Instance](images/configure_instance.png)
+This lab requires approximately 45 minutes to complete. You will have a total time of 180 minutes to complete this lab.
 
-## Step 4: Add Storage
+## AWS service restrictions
 
-You will also need to add storage to your instance. The default setting is 8 GB, which should be sufficient for this tutorial. If you need more storage, you can increase it.
+In this lab environment, access to AWS services and service actions might be restricted to the ones that are needed to complete the lab instructions. You might encounter errors if you attempt to access other services or perform actions beyond the ones that are described in this lab.
 
-![Add Storage](images/add_storage.png)
+## Accessing the AWS Management Console
 
-## Step 5: Configure Security Group
+At the top of these instructions, choose Start Lab to launch your lab.
 
-A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. In the next step, you need to create a new security group. Add a rule to allow SSH traffic on port 22.
+A Start Lab panel opens, and it displays the lab status.
 
-![Configure Security Group](images/configure_security_group.png)
+Tip: If you need more time to complete the lab, choose the Start Lab button again to restart the timer for the environment.
 
-## Step 6: Launch the Instance
+Wait until you see the message Lab status: ready, then close the Start Lab panel by choosing the X.
 
-Once you have completed the previous steps, you are ready to launch your instance. Click on the "Launch" button, and then select an existing key pair or create a new one. This key pair will be used to log in to the instance.
+At the top of these instructions, choose AWS.
 
-![Launch Instance](images/launch.png)
+This opens the AWS Management Console in a new browser tab. The system will automatically log you in.
 
-## Step 7: Connect to the Instance
+Note: If you find a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
 
-Now that your instance is running, you need to connect to it. You can do this using a terminal or a program such as PuTTY. You will need the public IP address of your instance, which you can find in the EC2 dashboard.
+Tip: If a new browser tab doesn't open, a banner or icon is usually at the top of your browser with a message that your browser is preventing the site from opening pop-up windows. Choose the banner or icon and then choose Allow pop ups.
 
-![Connect to Instance](images/connect_to_instance.png)
+Arrange the AWS Management Console tab so that it displays along side these instructions. Ideally, you will be able to see both browser tabs at the same time so that you can follow the lab steps more easily.
 
-## Step 8: Perform Basic Tasks
-
-Once you have connected to your instance, you can perform basic tasks such as updating packages, installing new software, and creating files. You can also use the EC2 instance to host a website, run a database, or perform other tasks.
-
-![Perform Basic Tasks](images/basic_tasks.png)
-
-## Conclusion
-
-This concludes the tutorial for the "Introduction to Amazon EC2" lab in the "Introduction to Cloud 101" course on AWS Educate. By following the steps outlined in this tutorial, you should now have a basic understanding of how to launch and manage an EC
+Tip: If you would like the lab instructions to display across the entire browser window, you can hide the terminal in the browser panel by unchecking the Terminal checkbox in the top right.
