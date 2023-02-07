@@ -141,3 +141,28 @@ The script does the following:
 - Configure the web server to automatically start on boot
 - Activate the Web server
 - Create a simple web page
+
+###Step 8: Launch an EC2 instance
+
+## Now that you have configured your EC2 instance settings, it is time to launch your instance.
+
+1. In the Summary section, choose Launch instance.
+
+2. Choose View all instances
+
+3. The instance appears in a Pending state, which means that it is being launched. It then changes to Running, which indicates that the instance has started booting. There will be a short time before you can access the instance.
+
+4. The instance receives a public Domain Name System (DNS) name that you can use to contact the instance from the Internet.
+
+5. Next to your Web-Server, select the check box. The Details tab displays detailed information about your instance.
+
+6. To view more information in the Details tab, drag the window divider upward.
+
+7. Review the information displayed in the Details, Security and Networking tabs.
+
+8. Wait for your instance to display the following:
+
+> Note: Refresh if needed.
+
+Instance State: Running
+Status Checks: 2/2 checks passed
